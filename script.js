@@ -275,4 +275,25 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('gallery-items:', document.querySelectorAll('.gallery-item').length);
     
     collectGalleryImages();
+
 });
+
+function playVideo() {
+    console.log('Клик по постеру');
+    
+    const poster = document.getElementById('videoPoster');
+    if (poster) {
+        poster.style.display = 'none';
+    }
+    
+    const iframe = document.getElementById('videoIframe');
+    if (iframe) {
+        iframe.style.display = 'block';
+        
+        const src = iframe.src;
+        iframe.src = '';
+        setTimeout(() => {
+            iframe.src = src;
+        }, 100);
+    }
+}
