@@ -102,18 +102,27 @@
 
         <div class="video-block">
             <h2>🌸 Видео, в главной роли: Лиза 🌸</h2>
-            <div class="video-container">
-                <iframe 
+    
+            <div class="video-container" style="position: relative; min-height: 450px; background: #fdeff2; border-radius: 40px; overflow: hidden; box-shadow: 0 20px 30px rgba(255, 182, 193, 0.4); border: 5px solid white;">
+                <div class="video-poster" id="videoPoster" onclick="playVideo()" style="cursor: pointer; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 20; border-radius: 40px; overflow: hidden; background: #fdeff2; display: flex; align-items: center; justify-content: center;">
+
+                    <img src="images/Liza/liza-poster.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" alt="Превью видео">
+            
+                    <div style="position: absolute; bottom: 15px; right: 20px; color: rgba(255, 255, 255, 0.7); text-shadow: 0 2px 5px rgba(0,0,0,0.3); font-size: 14px; background: rgba(0,0,0,0.2); padding: 5px 15px; border-radius: 30px; backdrop-filter: blur(3px); border: 1px solid rgba(255,255,255,0.3);">
+                        ▶ нажми пару раз для просмотра
+                    </div>
+                </div>
+        
+                <iframe id="videoIframe" 
+                    style="display: none; width: 100%; height: 450px; border-radius: 40px; border: none;"
                     src="https://drive.google.com/file/d/1eTZJUcfTduQYOgnCQmYE4ayeDhezRzJu/preview" 
-                    width="100%" 
-                    height="450"
                     frameborder="0" 
                     allowfullscreen="true">
                 </iframe>
             </div>
-    
-            <div class="video-info">
-                <span>🌸 Нажми play для просмотра лучших моментов с Лизой</span>
+
+            <div class="video-info" style="margin-top: 15px; text-align: center;">
+                <span style="background: white; padding: 8px 25px; border-radius: 40px; border: 2px solid #ffd9e2; color: #a5747e; display: inline-block;">🌸 Видео с лучшими моментами Лизы 🌸</span>
             </div>
         </div>
         
@@ -233,3 +242,4 @@
 </body>
 
 </html>
+
