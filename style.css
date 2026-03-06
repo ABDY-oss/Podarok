@@ -978,4 +978,69 @@ footer {
 .photo-frame:hover .photo-zoom-icon {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+
+}
+
+.video-block {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.video-block h2 {
+    color: #c45d7a;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.video-block h2::before,
+.video-block h2::after {
+    content: "🌸";
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.video-container {
+    position: relative;
+    min-height: 450px;
+    background: #fdeff2;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(255, 182, 193, 0.4);
+    border: 5px solid white;
+}
+
+.video-poster {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fdeff2;
+}
+
+.video-poster:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 35px rgba(255, 105, 180, 0.3);
+}
+
+.video-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-info span {
+    background: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 2px solid #ffd9e2;
+    color: #a5747e;
+    display: inline-block;
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
 }
