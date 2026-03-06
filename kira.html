@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кира • Самая загадочная</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили для видео */
+        .local-video {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background: #fdeff2;
+            border-radius: 30px;
+        }
+        
+        .video-info {
+            margin-top: 15px;
+            color: #a5747e;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .video-info span {
+            background: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            border: 2px solid #ffd9e2;
+        }
+    </style>
+</head>
+<body class="girl-page">
+    <!-- Анимированные цветочки на фоне -->
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌼</div>
+    <div class="flower flower3">🌷</div>
+    <div class="flower flower4">🌺</div>
+    <div class="flower flower5">🌹</div>
+
+    <header>
+        <div class="flower-corner left">🌺</div>
+        <div class="flower-corner right">🌻</div>
+    
+        <div class="flower-medallion">
+            <div class="medallion-image" onclick="openHeaderLightbox('images/Kira/kira-header.jpg', 'Фото Киры')">
+                <img src="images/Kira/kira-header.jpg" 
+                    alt="Фото Киры">
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="flower-circle">
+                <span style="--i: 1">🌷</span>
+                <span style="--i: 2">🌸</span>
+                <span style="--i: 3">🌼</span>
+                <span style="--i: 4">🌺</span>
+                <span style="--i: 5">🌸</span>
+                <span style="--i: 6">🌻</span>
+                <span style="--i: 7">🌹</span>
+                <span style="--i: 8">💐</span>
+            </div>
+        </div>
+    
+        <h1>Кирочка</h1>
+        <p>Мисс загадка</p>
+    </header>
+
+    <main class="container">
+        <div class="photo-block">
+            <div class="photo-frame" onclick="openMainPhotoLightbox('images/Kira/kira1.jpg', 'Кира програмирует')">
+                <img src="images/Kira/kira1.jpg" 
+                    alt="Фото Киры 1">
+            </div>
+            <div class="text-content">
+                <p>Пропуски в твоем дневнике отдаются пропусками в наших сердцах, почаще заходи к нам, ну а так просто оставайся такой же чиловой и не особо разговорчивой, кто-то скажет кринж, ну а мы твой класс скажем что это аура фарминг</p>
+                <div class="flower-quote">🌸 "Оставайся такой же прекрасной, как подснежник в начале весны" 🌸</div>
+            </div>
+        </div>
+
+        <div class="photo-block reverse">
+            <div class="photo-frame" onclick="openMainPhotoLightbox('images/Kira/kira2.jpg', 'Кира на линейке')">
+                <img src="images/Kira/kira2.jpg" 
+                    alt="Фото Киры 2">
+            </div>
+            <div class="text-content">
+                <p>Оставайся такой же взрослой как и сейчас, то что от тебя веет взрослостью это безусловный плюс, кто бы что не говорил ты реально классно выглядишь, а для своего возраста вдвойне</p>
+                <div class="flower-quote">🌷 "Сияй ярче всех цветов на свете" 🌷</div>
+            </div>
+        </div>
+
+        <div class="photo-block">
+             <div class="photo-frame" onclick="openMainPhotoLightbox('images/Kira/kira3.jpg', 'Кира с проектом')">
+                <img src="images/Kira/kira3.jpg" 
+                    alt="Фото Киры 3">
+            </div>
+            <div class="text-content">
+                <p>Не забывай общаться с нами, многим из нас это очень важно, ну а если подводить итоги, то оставайся такой же чиловой,какой то недостижимой и просто классной одноклассницей</p>
+                <div class="flower-quote">🧁 "Будь прекрасна, как майская роза" 🧁</div>
+            </div>
+        </div>
+
+        <div class="video-block">
+            <h2>🌸 Видео, в главной роли: Кира 🌸</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1wUwF6LcK2OGdvNc7ORw_9vcAJcUOs2Nu/preview" 
+                    width="100%"
+                    height="450" 
+                    frameborder="0" 
+                    allowfullscreen="true">
+                </iframe>
+            </div>
+    
+            <div class="video-info">
+                <span>🌸 Нажми play для просмотра лучших моментов с Кирой</span>
+            </div>
+        </div>
+        
+        <div class="photo-gallery">
+            <h3 style="color: #c45d7a; margin-bottom: 20px;">🌸 Галерея фотографий 🌸</h3>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Фото 1 -->
+                <div class="gallery-item" data-index="0">
+                    <img src="images/Kira/kira-gallery1.jpg" 
+                        alt="В МИРЭА"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>В МИРЭА</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 2 -->
+                <div class="gallery-item" data-index="1">
+                    <img src="images/Kira/kira-gallery2.jpg" 
+                        alt="Очень нравится экскурсия"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>Очень нравится экскурсия</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 3 -->
+                <div class="gallery-item" data-index="2">
+                    <img src="images/Kira/kira-gallery3.jpg" 
+                        alt="В метро"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>В метро</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="girls-nav">
+        <h3>🌸 Наши прекрасные одноклассницы и учительницы</h3>
+        <div class="nav-links">
+            <a href="masha.html" class="nav-link">🌸 Мария Сергеевна</a>
+            <a href="lena.html" class="nav-link">🌼 Елена Геннадьевна</a>
+            <a href="sonya.html" class="nav-link">🌷 Соня</a>
+            <a href="katya.html" class="nav-link">🌺 Катя</a>
+            <a href="zalina.html" class="nav-link">🌻 Залина</a>
+            <a href="natasha.html" class="nav-link">🌿 Наташа</a>
+            <a href="liza.html" class="nav-link">💮 Лиза</a>
+        </div>
+    </nav>
+
+    <footer>
+        <p>🌸 С 8 Марта, наши любимые одноклассницы и учительницы! Пусть каждый день для вас цветёт счастьем, как вы цветёте своей красотой! 🌸</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">Сделано с любовью вашими любимыми мальчиками вашего любимого 10И класса</p>
+    </footer>
+
+    <div id="headerLightbox" class="lightbox" onclick="closeHeaderLightbox()">
+        <span class="close-lightbox" onclick="closeHeaderLightbox(event)">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="headerLightbox-img" src="" alt="">
+            <div id="headerLightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <div id="galleryLightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeGalleryLightbox(event)">&times;</span>
+    
+        <span class="prev-photo" onclick="changeGalleryPhoto(-1, event)">❮</span>
+        <span class="next-photo" onclick="changeGalleryPhoto(1, event)">❯</span>
+    
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="galleryLightbox-img" src="" alt="">
+            <div id="galleryLightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <div id="mainPhotoLightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeMainPhotoLightbox(event)">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="mainPhotoLightbox-img" src="" alt="">
+            <div id="mainPhotoLightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

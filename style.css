@@ -1,0 +1,981 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fff5f5 0%, #fdeff2 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Анимированные цветочки на фоне */
+.flower {
+    position: fixed;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.flower1 { top: 10%; left: 5%; animation-delay: 0s; }
+.flower2 { top: 70%; right: 3%; animation-delay: 1s; }
+.flower3 { bottom: 15%; left: 15%; animation-delay: 2s; }
+.flower4 { top: 40%; right: 20%; animation-delay: 3s; }
+.flower5 { bottom: 30%; left: 80%; animation-delay: 4s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Страница входа */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    z-index: 10;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(255, 182, 193, 0.3);
+    border: 2px solid rgba(255, 192, 203, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-card::before {
+    content: "🌼🌻🌸🌺🌷";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    opacity: 0.1;
+    white-space: nowrap;
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+.login-card h1 {
+    color: #d47b8d;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b8a1a6;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #a5747e;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ffd9e2;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: white;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #f8a5b3;
+    box-shadow: 0 0 0 3px rgba(248, 165, 179, 0.2);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #f8a5b3, #f5b0ba);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(248, 165, 179, 0.4);
+}
+
+.error-message {
+    color: #ff6b8b;
+    text-align: center;
+    margin-top: 15px;
+    min-height: 20px;
+}
+
+.flower-decoration {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.flower-decoration span {
+    margin: 0 5px;
+    animation: bounce 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+.flower-decoration span:nth-child(2) { animation-delay: 0.3s; }
+.flower-decoration span:nth-child(3) { animation-delay: 0.6s; }
+.flower-decoration span:nth-child(4) { animation-delay: 0.9s; }
+.flower-decoration span:nth-child(5) { animation-delay: 1.2s; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Общие стили для страниц девочек */
+.girl-page {
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(255, 228, 240, 0.9));
+    border-radius: 50px 50px 30px 30px;
+    margin-bottom: 40px;
+    position: relative;
+    border: 2px solid white;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #c45d7a;
+    text-shadow: 2px 2px 0 #ffe4ed;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #a5747e;
+    font-style: italic;
+}
+
+.flower-corner {
+    position: absolute;
+    font-size: 2em;
+}
+
+.flower-corner.left { left: 20px; top: 20px; }
+.flower-corner.right { right: 20px; top: 20px; }
+
+/* Контейнер для контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Блоки с фото и текстом */
+.photo-block {
+    display: flex;
+    align-items: center; /* Это выравнивает фото и текст по вертикали */
+    gap: 40px;
+    margin: 60px 0;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+}
+
+.photo-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.photo-frame {
+    flex: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(255, 182, 193, 0.4);
+    border: 5px solid white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    aspect-ratio: 4/3;
+    width: 100%;
+    max-width: 500px; /* Немного уменьшил максимальную ширину */
+    margin: 0 auto;
+}
+
+.photo-frame::before {
+    content: "🌸";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 30px;
+    transform: rotate(-15deg);
+    z-index: 10;
+}
+
+.photo-frame::after {
+    content: "🌼";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    font-size: 30px;
+    transform: rotate(15deg);
+    z-index: 10;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.photo-frame:hover img {
+    transform: scale(1.05);
+}
+
+.text-content {
+    flex: 1;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
+    border: 2px dashed #ffb6c1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Текст по центру по вертикали */
+    min-height: 300px; /* Минимальная высота, чтобы текст не съезжал */
+}
+
+.text-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #5d4a4f;
+    margin-bottom: 20px;
+}
+
+.flower-quote {
+    text-align: right;
+    font-style: italic;
+    color: #d47b8d;
+    border-top: 2px dotted #ffb6c1;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .photo-block {
+        flex-direction: column !important;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .photo-frame {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .text-content {
+        width: 100%;
+        min-height: auto; /* Убираем минимальную высоту на мобильных */
+        padding: 20px;
+    }
+}
+
+/* Блок с видео */
+.video-block {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.video-block h2 {
+    color: #c45d7a;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.video-block h2::before,
+.video-block h2::after {
+    content: "🌸";
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(255, 182, 193, 0.5);
+    border: 5px solid white;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Навигация по страницам */
+.girls-nav {
+    background: linear-gradient(135deg, #ffe9f0, #ffd9e4);
+    padding: 40px 20px;
+    border-radius: 60px 60px 0 0;
+    margin-top: 60px;
+    border-top: 5px solid white;
+}
+
+.girls-nav h3 {
+    text-align: center;
+    color: #b25672;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    padding: 12px 25px;
+    background: white;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #c45d7a;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #ffb6c1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover {
+    background: #f8a5b3;
+    color: white;
+    transform: translateY(-3px);
+    border-color: #f8a5b3;
+}
+
+.nav-link.active {
+    background: #f8a5b3;
+    color: white;
+    border-color: #f8a5b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #a5747e;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 30px 30px 0 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .photo-block {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+    
+    .photo-frame img {
+        height: 300px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .login-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Стили для фото-медальона */
+.medallion {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+}
+
+.medallion-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.medallion-flowers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+}
+
+.medallion-flowers span {
+    position: absolute;
+    font-size: 28px;
+    filter: drop-shadow(0 5px 5px rgba(255, 182, 193, 0.5));
+}
+
+.medallion-flowers span:nth-child(1) { top: -15px; left: 50%; transform: translateX(-50%); }
+.medallion-flowers span:nth-child(2) { top: 30%; right: -20px; transform: rotate(15deg); }
+.medallion-flowers span:nth-child(3) { bottom: 30%; right: -15px; transform: rotate(30deg); }
+.medallion-flowers span:nth-child(4) { bottom: -15px; left: 50%; transform: translateX(-50%); }
+.medallion-flowers span:nth-child(5) { bottom: 30%; left: -20px; transform: rotate(-15deg); }
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ФОТО-МЕДАЛЬОН С ИДЕАЛЬНЫМ КРУГОМ ИЗ ЦВЕТОВ */
+.flower-medallion {
+    position: relative;
+    width: 260px;      /* Размер всего медальона (контейнер для фото и цветов) */
+    height: 260px;     /* Должен быть равен width */
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Само фото в центре */
+.medallion-image {
+    width: 250px;      /* Размер фото (чем больше, тем крупнее фото) */
+    height: 250px;     /* Должен быть равен width для идеального круга */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    animation: simpleScale 0.6s ease-out;
+}
+
+.medallion-image:hover .zoom-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.medallion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-radius: 50%;
+}
+
+.medallion-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Лупа при наведении */
+.zoom-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 10px rgba(255, 105, 180, 0.5);
+    pointer-events: none;
+}
+
+.medallion-image:hover {
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.5);
+}
+
+/* Круг из цветочков */
+.flower-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: rotateCircle 20s linear infinite; /* Вращаем весь круг */
+    z-index: 2;
+}
+
+.flower-circle span {
+    position: absolute;
+    font-size: 28px;
+    filter: drop-shadow(0 5px 8px rgba(255, 140, 200, 0.5));
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Угол для каждого цветочка */
+    --angle: calc(360deg / 8 * (var(--i) - 1));
+    --radius: 150px;
+    
+    /* Позиционируем каждый цветок под своим углом */
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    
+    /* ВАЖНО! Цветок сначала поворачивается на свой угол, 
+       потом двигается от центра, и больше НИКАК не поворачивается */
+    transform: rotate(var(--angle)) translateY(calc(-1 * var(--radius)));
+    
+    /* УБИРАЕМ любые вращения цветка - они больше не нужны */
+    
+    /* Анимация появления (без вращения) */
+    animation: flowerAppear 0.5s ease-out var(--delay) forwards;
+    
+    /* Начальное состояние */
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(calc(-1 * var(--radius))) scale(0);
+}
+
+/* Анимация вращения всего круга */
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Простая анимация появления - ТОЛЬКО появление, без вращения */
+@keyframes flowerAppear {
+    0% {
+        opacity: 0;
+        transform: rotate(var(--angle)) translateY(calc(-1 * var(--radius))) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(var(--angle)) translateY(calc(-1 * var(--radius))) scale(1);
+    }
+}
+
+/* Индивидуальные задержки анимации для каждого цветочка */
+.flower-circle span:nth-child(1) { --i: 1; --delay: 0.1s; }
+.flower-circle span:nth-child(2) { --i: 2; --delay: 0.2s; }
+.flower-circle span:nth-child(3) { --i: 3; --delay: 0.3s; }
+.flower-circle span:nth-child(4) { --i: 4; --delay: 0.4s; }
+.flower-circle span:nth-child(5) { --i: 5; --delay: 0.5s; }
+.flower-circle span:nth-child(6) { --i: 6; --delay: 0.6s; }
+.flower-circle span:nth-child(7) { --i: 7; --delay: 0.7s; }
+.flower-circle span:nth-child(8) { --i: 8; --delay: 0.8s; }
+
+/* Анимация появления фото */
+@keyframes simpleScale {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 500px) {
+    .flower-medallion {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .medallion-image {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .flower-circle span {
+        font-size: 24px;
+        --radius: 90px; /* Для фото 140px: 70 + 20 = 90px */
+    }
+}
+
+/* ГАЛЕРЕЯ С ПРЯМОУГОЛЬНИКАМИ */
+.photo-gallery {
+    margin: 60px 0 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(255, 140, 200, 0.2);
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    border: 3px solid white;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 35px rgba(255, 105, 180, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 182, 193, 0.9), transparent);
+    padding: 20px 15px 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay span {
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.gallery-overlay p {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+/* ========== ЛАЙТБОКСЫ ========== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    animation: lightboxFadeIn 0.3s;
+}
+
+@keyframes lightboxFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Контейнер для фото */
+.lightbox-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ ФОТО В ЛАЙТБОКСАХ */
+#headerLightbox-img,
+#galleryLightbox-img,
+#mainPhotoLightbox-img {
+    max-width: 90vw;
+    max-height: 70vh; /* Уменьшил, чтобы оставить место для подписи */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Важно! Сохраняет пропорции и показывает всё фото */
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.3);
+    animation: lightboxZoom 0.3s;
+    display: block;
+    margin: 0 auto; /* Центрирование */
+}
+
+/* Подпись под фото - теперь всегда видна и отцентрирована */
+.lightbox-caption {
+    margin-top: 20px;
+    color: #a5747e;
+    font-size: 18px;
+    background: rgba(255, 230, 240, 0.9);
+    padding: 12px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
+    max-width: 80vw;
+    word-wrap: break-word;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Убедимся, что caption не перекрывает фото */
+#headerLightbox-caption,
+#galleryLightbox-caption,
+#mainPhotoLightbox-caption {
+    position: relative;
+    z-index: 1002;
+}
+
+@keyframes lightboxZoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* КРЕСТИК */
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #c45d7a;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: 50px;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+    transition: all 0.3s;
+    line-height: 1;
+    padding: 0;
+    border: 2px solid #ffd9e2;
+}
+
+.close-lightbox:hover {
+    background: #ffd9e2;
+    transform: scale(1.1);
+    color: #b25672;
+}
+
+/* СТРЕЛКИ ДЛЯ ГАЛЕРЕИ */
+.prev-photo, .next-photo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c45d7a;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: 50px;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+    transition: all 0.3s;
+    border: 2px solid #ffd9e2;
+}
+
+.prev-photo {
+    left: 30px;
+}
+
+.next-photo {
+    right: 30px;
+}
+
+.prev-photo:hover, .next-photo:hover {
+    background: #ffd9e2;
+    transform: translateY(-50%) scale(1.1);
+    color: #b25672;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .prev-photo, .next-photo {
+        font-size: 30px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .close-lightbox {
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
+    
+    .lightbox-caption {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+    
+    #headerLightbox-img,
+    #galleryLightbox-img,
+    #mainPhotoLightbox-img {
+        max-height: 65vh; /* Чуть меньше на мобильных */
+    }
+}
+
+/* СТИЛИ ДЛЯ ФОТО В ОСНОВНЫХ БЛОКАХ */
+.photo-frame {
+    flex: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(255, 182, 193, 0.4);
+    border: 5px solid white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 35px rgba(255, 105, 180, 0.3);
+}
+
+.photo-frame::before {
+    content: "🌸";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 30px;
+    transform: rotate(-15deg);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.photo-frame::after {
+    content: "🌼";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    font-size: 30px;
+    transform: rotate(15deg);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.photo-frame:hover img {
+    transform: scale(1.05);
+}
+
+/* Иконка лупы для основных фото */
+.photo-zoom-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #c45d7a;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    border: 2px solid white;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.photo-frame:hover .photo-zoom-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}

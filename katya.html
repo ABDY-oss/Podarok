@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Катя • Лучшая танцовщица</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .local-video {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            background: #fdeff2;
+            border-radius: 30px;
+        }
+        
+        .video-info {
+            margin-top: 15px;
+            color: #a5747e;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .video-info span {
+            background: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            border: 2px solid #ffd9e2;
+        }
+    </style>
+</head>
+<body class="girl-page">
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌼</div>
+    <div class="flower flower3">🌷</div>
+    <div class="flower flower4">🌺</div>
+    <div class="flower flower5">🌹</div>
+
+    <header>
+        <div class="flower-corner left">🌺</div>
+        <div class="flower-corner right">🌻</div>
+    
+        
+        <div class="flower-medallion">
+            <div class="medallion-image" onclick="openHeaderLightbox('images/Katya/katya-header.jpg', 'Фото Кати')">
+                <img src="images/Katya/katya-header.jpg" 
+                    alt="Фото Кати">
+                <div class="zoom-icon">🔍</div>
+            </div>
+            <div class="flower-circle">
+                <span style="--i: 1">🌷</span>
+                <span style="--i: 2">🌸</span>
+                <span style="--i: 3">🌼</span>
+                <span style="--i: 4">🌺</span>
+                <span style="--i: 5">🌸</span>
+                <span style="--i: 6">🌻</span>
+                <span style="--i: 7">🌹</span>
+                <span style="--i: 8">💐</span>
+            </div>
+        </div>
+    
+        <h1>Катенька</h1>
+        <p>Женская реинкарнация Декарта, Эйлера, Ньютона, а в остальное время просто прекрасная одноклассница</p>
+    </header>
+
+    <main class="container">
+        <div class="photo-block">
+            <div class="photo-frame" onclick="openMainPhotoLightbox('images/Katya/katya1.jpg', 'Катя в МИРЭА')">
+                <img src="images/Katya/katya1.jpg" 
+                    alt="Фото Кати 1">
+            </div>
+            <div class="text-content">
+                <p>Катя - ты бессменная звезда надежды всего класса на любых контрольных, не на кого нельзя так же положиться как на тебя или Илью, но этот текст не про него, учеба-это лишь одна из немногих твоих сильных сторон, ты прекрасная одноклассница и подруга, ты живая квинтэссенция всех положительных качеств, на перечисление которых уйдет не одна тысяча слов, ты сочетаешь в себе  как доброту, понимание, усидчивость и внимательность, так и сдержанность, самоконтроль, хладнокровие, рационализм и прагматичность, ну а в добавок к этим двум группам любовь к животным и прекрасную улыбку и смех, что нельзя не отметить.</p>
+                <div class="flower-quote">🌸 "Расцветай с каждым днём всё ярче!" 🌸</div>
+            </div>
+        </div>
+
+        <div class="photo-block reverse">
+            <div class="photo-frame" onclick="openMainPhotoLightbox('images/Katya/katya2.jpg', 'Катя на фотосессии')">
+                <img src="images/Katya/katya2.jpg" 
+                    alt="Фото Кати 2">
+            </div>
+            <div class="text-content">
+                <p>Если наш класс единый организм, то ты его неотъемлемый "орган" без которого он бы не мог функционировать, а ведь таких "органов" по пальцам одной руки пересчитать, в общем твоя незаменимость очевидна, твои хобби необычны, а круг интересов разнообразен, твоему графику поразится даже самый занятой и трудолюбивый человек, невероятно как тебе удается делать все дела, твое трудолюбие заслуживает уважения. Просто находясь в классе ты поднимаешь настроение и как бы успокаиваешь всех, ведь от тебя идёт аура уверенности, уверенности в себе, ну а у нас появляется уверенность в человеке в которого хочется верить, уверенность в тебе, спасибо большое за это.</p>
+                <div class="flower-quote">🌷 "Будь нежной, как лепесток розы" 🌷</div>
+            </div>
+        </div>
+
+        <div class="photo-block">
+             <div class="photo-frame" onclick="openMainPhotoLightbox('images/Katya/katya3.jpg', 'Катя с хищником')">
+                <img src="images/Katya/katya3.jpg" 
+                    alt="Фото Кати 3">
+            </div>
+            <div class="text-content">
+                <p>Твоего трудолюбия и упорства хватит чтобы довести любое дело до конца и чтобы начать делать что-то новое, тебе это точно подчинится, твои открытость и очарование заставляют людей тянутся к тебе, это проявления явного лидерского потенциала, одно из твоих важнейших умений это умение адаптироваться к любым условиям и находить решения проблем там где других охватывает безысходность (например внеплановая контроша:3), ну а так мы не скажем оставаться тебе такой же какая ты есть, преумножай свои положительные качества, ну а негативные ты преумножить не сможешь ведь 0*х=0, навсегда закрепи в своей душе свою доброту и милосердие, а так будь всегда главным  украшением нашего класса(и почаще гладь кота)</p>
+                <div class="flower-quote">🧁 "Пусть жизнь будет такой же красивой, как цветущий сад" 🧁</div>
+            </div>
+        </div>
+
+        <div class="video-block">
+            <h2>🌸 Видео, в главной роли: Катя 🌸</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1sFntjcToFUW38re0uWwVL8vusJUak7Kd/preview" 
+                    width="100%" 
+                    height="450"
+                    frameborder="0" 
+                    allowfullscreen="true">
+                </iframe>
+            </div>
+    
+            <div class="video-info">
+                <span>🌸 Нажми play для просмотра лучших моментов с Катей</span>
+            </div>
+        </div>
+        
+        <div class="photo-gallery">
+            <h3 style="color: #c45d7a; margin-bottom: 20px;">🌸 Галерея фотографий 🌸</h3>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Фото 1 -->
+                <div class="gallery-item" data-index="0">
+                    <img src="images/Katya/katya-gallery1.jpg" 
+                        alt="На уроке"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>На уроке</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 2 -->
+                <div class="gallery-item" data-index="1">
+                    <img src="images/Katya/katya-gallery2.jpg" 
+                        alt="В Москвариуме"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>В Москвариуме</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 3 -->
+                <div class="gallery-item" data-index="2">
+                    <img src="images/Katya/katya-gallery3.jpg" 
+                        alt="В Казани"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>В Казани</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 4 -->
+                <div class="gallery-item" data-index="3">
+                    <img src="images/Katya/katya-gallery4.jpg" 
+                        alt="С Наташей в Росбиотехе"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>С Наташей в Росбиотехе</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 5 -->
+                <div class="gallery-item" data-index="4">
+                    <img src="images/Katya/katya-gallery5.jpg" 
+                        alt="Гуляет с Наташей"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>Гуляет с Наташей</p>
+                    </div>
+                </div>
+        
+                <!-- Фото 6 -->
+                <div class="gallery-item" data-index="5">
+                    <img src="images/Katya/katya-gallery6.jpg" 
+                        alt="Конфискует еду"
+                        onclick="openGalleryLightboxFromElement(this)">
+                    <div class="gallery-overlay">
+                        <p>Конфискует еду</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="girls-nav">
+        <h3>🌸 Наши прекрасные одноклассницы и учительницы</h3>
+        <div class="nav-links">
+            <a href="masha.html" class="nav-link">🌸 Мария Сергеевна</a>
+            <a href="lena.html" class="nav-link">🌼 Елена Геннадьевна</a>
+            <a href="sonya.html" class="nav-link">🌷 Соня</a>
+            <a href="zalina.html" class="nav-link">🌻 Залина</a>
+            <a href="natasha.html" class="nav-link">🌿 Наташа</a>
+            <a href="liza.html" class="nav-link">💮 Лиза</a>
+            <a href="kira.html" class="nav-link">🌹 Кира</a>
+        </div>
+    </nav>
+
+    <footer>
+        <p>🌸 С 8 Марта, наши любимые одноклассницы и учительницы! Пусть каждый день для вас цветёт счастьем, как вы цветёте своей красотой! 🌸</p>
+        <p style="font-size: 0.9em; margin-top: 10px;">Сделано с любовью вашими любимыми мальчиками вашего любимого 10И класса</p>
+    </footer>
+
+    <div id="headerLightbox" class="lightbox" onclick="closeHeaderLightbox()">
+        <span class="close-lightbox" onclick="closeHeaderLightbox(event)">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="headerLightbox-img" src="" alt="">
+            <div id="headerLightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <div id="galleryLightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeGalleryLightbox(event)">&times;</span>
+    
+        <span class="prev-photo" onclick="changeGalleryPhoto(-1, event)">❮</span>
+        <span class="next-photo" onclick="changeGalleryPhoto(1, event)">❯</span>
+    
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="galleryLightbox-img" src="" alt="">
+            <div id="galleryLightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <div id="mainPhotoLightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeMainPhotoLightbox(event)">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="mainPhotoLightbox-img" src="" alt="">
+            <div id="mainPhotoLightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
